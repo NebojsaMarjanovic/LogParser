@@ -15,6 +15,7 @@ var ipAnalyzer = new IpAnalyzer();
 
 //I decided to use DnsClient library because of its easy-to-use interface and because I can set the timeout of dns lookup.
 //I am not sure if it's possible inside the built-in Dns lookup in C#, so I didn't wanted to waste the time in searching for hard-code solution.
+//I've set Timeout to be 3 seconds due the fact that some lookups can be very slow, but, as you will see, I've gave the potential sollution for that problem.
 var dnsClient = new LookupClient(new LookupClientOptions() { Timeout = TimeSpan.FromSeconds(3) });
 
 
